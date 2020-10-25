@@ -1,19 +1,26 @@
-<div class="box-product-figure">
+<div class="box-product-figure" (mouseover)="hoverAll=true" (mouseleave)="hoverAll=false">
     <div class="containerpicture">
         <div class="overflow">
-            <img class="slika" src={{offer.url}} alt="" (click)="changeImage()"/>
+            <img class="slika" src={{offer.url}} alt=""/>
         </div>
         
             <div class="triangleup"></div>
             <div class="trianglebottomleft"></div>
+            <div class="arrowsprev" (click)="changeImage(-1)">    
+                <div *ngIf="hoverAll" class="arrows prev"></div>
+            </div>
+            <div class="arrowsnext" (click)="changeImage(1)">   
+                <div *ngIf="hoverAll" class="arrows next"></div>
+            </div>
 
     </div>
 </div>
-<div class="box-product-caption whitebackground midle">
+<div class="box-product-caption whitebackground midle" (mouseover)="hoverText=true" (mouseleave)="hoverText=false">
     <div class="">
         <h4 class="box-product-title midle">{{offer.offerName}}</h4>
         <div class="underline">
-            <div *ngIf="changeText" class="line"></div>
+            <div *ngIf="hoverAll || hoverText" class="line"></div>
         </div>
+        <div class="getToKnowMore">Izvedi več ...</div>
     </div>
 </div>
