@@ -1,7 +1,7 @@
 <section class="section section-xl bg-gray-700">
     <div class="container">
       <div class="row row-15 row-gutters-14">
-        <div class="col-md-6 col-lg-4 wow fadeInUp containerpadding" *ngFor="let offer of offers" (mouseover)="changeText=true" (mouseout)="changeText=false">
+        <div class="col-md-6 col-lg-4 wow fadeInUp containerpadding" *ngFor="let offer of offers">
             <card [offer]="offer"></card>
         </div>
       </div>

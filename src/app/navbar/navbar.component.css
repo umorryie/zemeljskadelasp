@@ -1,10 +1,10 @@
 .frontPicture{
-    height: 80%;
-    width: auto;
+    height: 100%;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.7;
+    opacity: 0.4;
 }
 .intro{
     display: flex;
