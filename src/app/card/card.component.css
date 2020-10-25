@@ -1,0 +1,68 @@
+.slika{
+    width: 100%;
+    transition: transform 0.5s;
+}
+.overflow{
+    overflow: hidden;
+}
+.midle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #151515;
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.whitebackground{
+    text-align: center;
+    padding: 15px 25px 25px;
+    height: 150px;
+    transition: all .5s;
+    color: rgba(0, 0, 0, 0.8);
+    background: #ffffff;
+}
+.triangleup {
+    width: 0;
+    bottom:0;
+    height: 0;
+    position: absolute;
+    border-left: 0px solid transparent;
+    border-right: 270px solid transparent;
+    border-bottom: 50px solid #ffffff;
+  }
+.trianglebottomleft {
+    width: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    border-bottom: 50px solid #ffffff;
+    border-left: 270px solid transparent;
+  }
+  .containerpicture{
+    position: relative;
+  }
+  .whitecontainer{
+      position: absolute;
+  }
+  .containerpadding{
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .slika:hover{
+    transform: scale(1.2);
+    transition: transform 0.5s
+  }
+ 
+  .line{
+      height: 3px;
+      width: 80%;
+      background-color: yellow;
+      transition: transform 0.3s;
+  }
+  .underline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+  }

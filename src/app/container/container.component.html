@@ -1,0 +1,30 @@
+<section class="section section-xl bg-gray-700">
+    <div class="container">
+      <div class="row row-15 row-gutters-14">
+        <div class="hidenShow col-md-6 col-lg-4 wow fadeInUp containerpadding" *ngFor="let offer of offers" (mouseover)="changeText=true" (mouseout)="changeText=false">
+            <div class="box-product-figure">
+                <div class="containerpicture">
+                    <div class="overflow">
+                        <img class="slika" src={{offer.url}} alt=""/>
+                    </div>
+                    
+                        <div class="triangleup"></div>
+                        <div class="trianglebottomleft"></div>
+
+                </div>
+            </div>
+            <div class="box-product-caption whitebackground midle">
+                <div class="">
+                    <h4 class="box-product-title midle">{{offer.offerName}}</h4>
+                    <div class="underline">
+                        <div *ngIf="changeText" class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4 wow fadeInUp containerpadding" *ngFor="let offer of offers" (mouseover)="changeText=true" (mouseout)="changeText=false">
+            <card [offer]="offer"></card>
+        </div>
+      </div>
+    </div>
+</section>

@@ -1,0 +1,19 @@
+<div class="box-product-figure">
+    <div class="containerpicture">
+        <div class="overflow">
+            <img class="slika" src={{offer.url}} alt="" (click)="changeImage()"/>
+        </div>
+        
+            <div class="triangleup"></div>
+            <div class="trianglebottomleft"></div>
+
+    </div>
+</div>
+<div class="box-product-caption whitebackground midle">
+    <div class="">
+        <h4 class="box-product-title midle">{{offer.offerName}}</h4>
+        <div class="underline">
+            <div *ngIf="changeText" class="line"></div>
+        </div>
+    </div>
+</div>
