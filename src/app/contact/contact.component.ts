@@ -1,5 +1,7 @@
 import { Component, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'contact',
@@ -14,6 +16,8 @@ export class ContactComponent {
   surname: string;
   email: string;
   message: string;
+  phone = faPhone;
+  envelope = faEnvelope;
 
   constructor(private http: HttpClient) {
     this.name = "";
