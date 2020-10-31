@@ -63,7 +63,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "zemeljska-dela:build"
+            "browserTarget": "zemeljska-dela:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {

@@ -1,23 +1,23 @@
-<div class="container">
+<div class="contacts">
+  <div class="container backgroundd">
     <div style="text-align:center">
       <h2>Kontaktiraj nas</h2>
       <p>Pošlji nam svoje povpraševanje. Odgovorili bomo v najkrajšem možnem času</p>
     </div>
-    <div class="row">
+    <div class="row rowContainer">
       <div class="column">
-      </div>
-      <div class="column">
-        <form>
-          <label for="fname">Ime</label>
-          <input type="text" id="fname" name="firstname">
-          <label for="lname">Priimek</label>
-          <input type="text" id="lname" name="lastname">
-          <label for="lname">E-mail</label>
-          <input type="text" id="lname" name="email">
-          <label for="subject">Sporočilo</label>
-          <textarea id="subject" name="subject" style="height:170px"></textarea>
-          <input class="sendtext" type="submit" value="Pošlji">
-        </form>
+        <div>
+          <label for="fname" >Ime</label>
+          <input type="text" id="fname" name="firstname" (keyup)="onNameChange($event)">
+          <label for="lname" >Priimek</label>
+          <input type="text" id="lname" name="lastname" (keyup)="onSurnameChange($event)">
+          <label for="lname" >E-mail</label>
+          <input type="text" id="lname" name="email" (keyup)="onEmailChange($event)">
+          <label for="subject" >Sporočilo</label>
+          <textarea id="subject" name="subject" style="height:170px" (keyup)="onMessageChange($event)"></textarea>
+          <input class="sendtext" type="submit" value="Pošlji" (click)="sendEmail()">
+        </div>
       </div>
     </div>
   </div>
+</div>

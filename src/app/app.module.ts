@@ -8,6 +8,9 @@ import { CardComponent } from './card/card.component';
 import { ProfilepictureComponent } from './profilepicture/profilepicture.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './about/about.component'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,12 +19,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavbarComponent,
     ContainerComponent,
     ProfilepictureComponent,
-    ContactComponent
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

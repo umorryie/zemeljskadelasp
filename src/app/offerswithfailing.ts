@@ -6,7 +6,13 @@ export const offers = {
             "images": [
                 {
                     src: "../../assets/20200522_164201.jpg",
-                }
+                },
+                {
+                    src: "../../assets/20200423_093652.jpg",
+                },
+                {
+                    src: "../../assets/sillos.jpg",
+                },
             ]
         },
         {
@@ -140,7 +146,13 @@ export const offers = {
             "offerName": "Izdelava gozdnih vlak",
             "url": "../../assets/20191201_142852.jpg",
             "images": [
-                { src: "../../assets/20191201_142852.jpg" }
+                { src: "../../assets/20191201_142852.jpg" },
+                { src: "../../assets/vlaka1.jpg" },
+                { src: "../../assets/vlaka2.jpg" },
+                { src: "../../assets/vlaka3.jpg" },
+                {
+                    src: "../../assets/vlaka.jpg",
+                },
             ]
         },
         {
@@ -167,6 +179,9 @@ export const offers = {
             "images": [
                 {
                     src: "../../assets/hiap.jpg",
+                },
+                {
+                    src: "../../assets/20190810_094325.jpg",
                 },
                 {
                     src: "../../assets/20200527_072135.jpg",

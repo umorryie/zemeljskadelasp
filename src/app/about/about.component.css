@@ -1,0 +1,21 @@
+.aboutContainer{
+    background-color: #f5f5f5;
+    height: 300px;
+}
+
+.container{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.centerAlign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin:20px;
+}

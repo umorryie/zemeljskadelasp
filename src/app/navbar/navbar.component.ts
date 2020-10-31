@@ -19,6 +19,12 @@ export class NavbarComponent {
     this.slika = "url('" + this.images[(this.index) % 3] + "')";
   }
 
+  ngOnInit() {
+    setInterval(() => {
+      this.changeImage(); 
+    }, 3500);
+  }
+
   changeImage() {
     this.index = (this.index + 1) % this.images.length;
     this.slika = "url('" + this.images[this.index] + "')";
