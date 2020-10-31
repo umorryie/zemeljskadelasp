@@ -18,12 +18,14 @@ export class ContactComponent {
   message: string;
   phone = faPhone;
   envelope = faEnvelope;
+  successfullySent: boolean;
 
   constructor(private http: HttpClient) {
     this.name = "";
     this.surname = "";
     this.email = "";
     this.message = "";
+    this.successfullySent = false; 
   }
 
   onNameChange(value: any) {
@@ -64,7 +66,9 @@ export class ContactComponent {
         "Access-Control-Allow-Origin": "*",
       }
     }).subscribe(data => {
-      console.log(data);
+      if(data){
+        this.successfullySent = true;
+      }
   });
 }
 }

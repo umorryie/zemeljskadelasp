@@ -127,3 +127,13 @@
   top: 67%;
   margin-top: -31px;
 }
+
+@media only screen and (max-width: 768px) {
+  .whitebackground{
+    height: 100px;
+  }
+
+  .overflow{
+    height: 70vh !important;
+  }
+}

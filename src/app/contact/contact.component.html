@@ -29,7 +29,12 @@
        </div>
    </section>
 </div>
-  <div class="container backgroundd">
+  <div *ngIf="successfullySent" class="container backgroundd centerAlignSend">
+    <div style="text-align:center">
+      <h2>Sporočilo uspešno poslano!</h2>
+    </div>
+  </div>
+  <div *ngIf="!successfullySent" class="container backgroundd">
     <div style="text-align:center">
       <h2>Piši nam</h2>
       <p>Pošlji nam svoje povpraševanje. Odgovorili bomo v najkrajšem možnem času</p>

@@ -89,3 +89,12 @@
 .mainContainer{
   padding-bottom: 12vh;
 }
+
+
+@media only screen and (max-width: 768px) {
+  .cardPhone{
+    margin: 20px;
+  }
+
+
+}
