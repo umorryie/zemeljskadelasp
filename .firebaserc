@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "zemeljskadela-dc60c": {
+      "hosting": {
+        "zemeljska-dela": [
+          "zemeljskadela-dc60c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "zemeljskadela-dc60c"
+  }
+}

@@ -15,10 +15,81 @@
     font-size: 5vw;
 }
 .front{
-    position: relative;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
+
+.frontPictureContainer{
+    width: 100%;
+    height:100%;
+    position: relative;
+}
+.navFrontBar{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 95vw;
+}
+
+.navFrontBar{
+    display: flex;
+    width: 95%;
+    padding-top: 5vh;
+}
+
+.navbarFont{
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 600 !important;
+    padding: 0 1rem;
+    opacity: 0.8;
+    transition: ease-in-out 0.3s;
+}
+
+.navbarFont:hover{
+    opacity: 1;
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 600px) {
+    
+.navbarFont{
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600 !important;
+    padding: 0 1rem;
+    opacity: 0.8;
+    transition: ease-in-out 0.3s;
+}
+}
+
+
+
+.animations1{
+    transform: translateY(-150px);
+    animation: come-in 0.9s ease forwards;
+  }
+  @keyframes come-in {
+    to { transform: translateY(0); }
+  }
+  
+
+.animations2{
+    transform: translateY(-150px);
+    animation: come-in 1.1s ease forwards;
+  }
+  
+
+.animations3{
+    transform: translateY(-150px);
+    animation: come-in 1.3s ease forwards;
+  }
+  
+
+.animations4{
+    transform: translateY(-150px);
+    animation: come-in 1.5s ease forwards;
+  }

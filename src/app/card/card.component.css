@@ -9,7 +9,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #151515;
+    color: #474f53;
+    font-weight: 600 !important;
     font-size: 22px;
     line-height: 1.5;
     font-weight: 400;
@@ -131,9 +132,5 @@
 @media only screen and (max-width: 768px) {
   .whitebackground{
     height: 100px;
-  }
-
-  .overflow{
-    height: 70vh !important;
   }
 }

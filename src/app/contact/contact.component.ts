@@ -1,7 +1,9 @@
 import { Component, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons';
-
+import { faPhone, faEnvelope, faLocationArrow} from '@fortawesome/free-solid-svg-icons';
+import{ init } from 'emailjs-com';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+init("user_mKMVt6L5RFy4sZkyfdEPp");
 
 @Component({
   selector: 'contact',
@@ -14,9 +16,11 @@ import { faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 export class ContactComponent {
   name: string;
   surname: string;
+  telephone: string;
   email: string;
   message: string;
   phone = faPhone;
+  address = faLocationArrow;
   envelope = faEnvelope;
   successfullySent: boolean;
 
@@ -25,6 +29,7 @@ export class ContactComponent {
     this.surname = "";
     this.email = "";
     this.message = "";
+    this.telephone = "";
     this.successfullySent = false; 
   }
 
@@ -44,33 +49,45 @@ export class ContactComponent {
   onMessageChange(value: any) {
     this.message = value.target.value;
   };
+  onTelephoneChange(value: any) {
+    this.telephone = value.target.value;
+  };
 
   sendEmail() {
-    const { surname, message, email, name } = this;
+    const { surname, message, email, name, telephone } = this;
     const request = {
       surname,
       message,
       email,
-      name
+      name,
+      telephone
     }
     const requestString = JSON.stringify(request);
 
-    /*const response = this.http.post('https://https://localhost:44307/sendemail', JSON.stringify(request)).subscribe(data => {
-      this.surname = "Matej PEsjak";
-    });*/
-    this.http.post(`/sendemail?request=${requestString}`,
-    {
-      "headers": {
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-        "Access-Control-Allow-Origin": "*",
+    var data = {
+      service_id: 'service_9b92izk',
+      template_id: 'template_156qwtq',
+      user_id: 'user_mKMVt6L5RFy4sZkyfdEPp',
+      template_params: request
+  };
+  emailjs.send(data.service_id, data.template_id, request, data.user_id).
+  then((res:EmailJSResponseStatus) => {
+    if(res){
+      this.successfullySent = true;
+    }
+  }, ()=>alert("Nekaj je šlo narobe. Sporočilo ni bilo posalno"));
+    this.http.post('https://api.emailjs.com/api/v1.0/email/send',data, {
+      headers:{
+        header: 'Content-Type: application/json'
       }
-    }).subscribe(data => {
-      if(data){
-        this.successfullySent = true;
-      }
-  });
-}
+    });
+  }
+  
+  goToTop(){
+    document.querySelector('.front').scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  }
 }
 
 interface EmailRequest {

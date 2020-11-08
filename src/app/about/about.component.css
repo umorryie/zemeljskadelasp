@@ -1,6 +1,6 @@
 .aboutContainer{
-    padding-top: 15vh;
-    padding-bottom: 20vh;
+    padding-top: 20vh;
+    padding-bottom: 25vh;
     background-color: #f5f5f5;
 }
 
@@ -22,6 +22,23 @@ h1{
 }
 
 .fa-4x {
-    color: grey !important;
+    color: rgb(148, 142, 142) !important;
 }
 
+h2, h3 {
+    color: #4d5153 !important;
+}
+
+.divider{
+    height: 0.2vh;
+    background-color: #9fa3a5;
+    width: 70%;
+}
+
+.animations{
+    transform: translateY(150px);
+    animation: come-in 0.8s ease forwards;
+}
+@keyframes come-in {
+    to { transform: translateY(0); }
+  }

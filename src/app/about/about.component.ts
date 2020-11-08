@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { faHeart, faGlobe, faClock, faGem} from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faGlobe, faClock, faGem, faHandshake, faFileAlt, faGraduationCap, faTools} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'about',
@@ -9,6 +9,10 @@ import { faHeart, faGlobe, faClock, faGem} from '@fortawesome/free-solid-svg-ico
 export class AboutComponent {
   heart = faHeart;
   diamond = faGem;
+  handShake = faHandshake;
+  predracuni = faFileAlt;
+  nadzor = faGraduationCap;
+  qulity = faTools;
   punctuality = faClock;
   world = faGlobe;
   constructor() {

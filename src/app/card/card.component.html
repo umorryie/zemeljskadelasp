@@ -1,4 +1,4 @@
-<div class="box-product-figure" (mouseover)="hoverAll=true" (mouseleave)="hoverAll=false">
+<div class="box-product-figure" (mouseover)="hoverAll=true" (mouseleave)="changeHoverOff()">
     <div class="containerpicture">
         <div class="overflow">
             <img class="slika" src={{offer.url}} alt=""/>
@@ -10,7 +10,7 @@
                 <div *ngIf="hoverAll" class="arrows prev"></div>
             </div>
             <div class="arrowsnext" (click)="changeImage(1)">   
-                <div *ngIf="hoverAll" class="arrows next"></div>
+                <div *ngIf="hoverAll" class="arrows next arrowsPhone"></div>
             </div>
 
     </div>

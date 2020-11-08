@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit, Input  } from '@angular/core';
 
 @Component({
   selector: 'card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
-export class CardComponent {
+export class CardComponent implements  OnInit {
   @Input() offer: Offer;
   changeText = false;
   index: number;
@@ -14,6 +14,19 @@ export class CardComponent {
 
   constructor() {
     this.index = 0;
+  }
+  ngOnInit() {
+    if (document.body.offsetWidth < 750) { // 768px portrait
+      this.hoverAll = true;
+    }
+  }
+
+  changeHoverOff(){
+    if(document.body.offsetWidth < 750){
+      this.hoverAll = true;
+    } else{
+      this.hoverAll = false;
+    }
   }
 
   changeImage(value: number) {

@@ -1,7 +1,7 @@
 <div class="contacts">
   <div class="aboutContainer">
     <!-- Services-->
-    <section class="page-section" id="services">
+    <section class="page-section  animations" id="services">
        <div class="container conctactcontainer">
          <div class="stepintouch">
           <h2 class="text-center mt-0">Stopite v kontakt z nami!</h2>
@@ -25,21 +25,29 @@
                       </a>
                    </div>
                </div>
+              <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <fa-icon [icon]="address"  class="fas fa-4x fa-globe text-primary mb-4"></fa-icon>
+                    <p class="text-muted mb-0">Brezen 66</p>
+                    <p class="text-muted mb-0">3205 Vitanje</p>
+                </div>
+            </div>
            </div>
        </div>
    </section>
 </div>
-  <div *ngIf="successfullySent" class="container backgroundd centerAlignSend">
+  <div *ngIf="successfullySent" class="container backgroundd centerAlignSend  animations">
     <div style="text-align:center">
       <h2>Sporočilo uspešno poslano!</h2>
+      <h3 class="curser" (click)="goToTop()">Pojdi na vrh strani</h3>
     </div>
   </div>
-  <div *ngIf="!successfullySent" class="container backgroundd">
+  <div *ngIf="!successfullySent" class="container backgroundd animations">
     <div style="text-align:center">
       <h2>Piši nam</h2>
       <p>Pošlji nam svoje povpraševanje. Odgovorili bomo v najkrajšem možnem času</p>
     </div>
-    <div class="row rowContainer">
+    <div class="row rowContainer  animations">
       <div class="column">
         <div>
           <label for="fname" >Ime</label>
@@ -48,6 +56,8 @@
           <input type="text" id="lname" name="lastname" (keyup)="onSurnameChange($event)">
           <label for="lname" >E-mail</label>
           <input type="text" id="lname" name="email" (keyup)="onEmailChange($event)">
+          <label for="lname" >Telefonska</label>
+          <input type="text" id="lname" name="email" (keyup)="onTelephoneChange($event)">
           <label for="subject" >Sporočilo</label>
           <textarea id="subject" name="subject" style="height:170px" (keyup)="onMessageChange($event)"></textarea>
           <input class="sendtext" type="submit" value="Pošlji" (click)="sendEmail()">
