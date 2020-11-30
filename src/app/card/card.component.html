@@ -7,10 +7,10 @@
             <div class="triangleup"></div>
             <div class="trianglebottomleft"></div>
             <div class="arrowsprev" (click)="changeImage(-1)">    
-                <div *ngIf="hoverAll" class="arrows prev"></div>
+                <div *ngIf="hoverAll && moreThanOnePicture" class="arrows prev"></div>
             </div>
             <div class="arrowsnext" (click)="changeImage(1)">   
-                <div *ngIf="hoverAll" class="arrows next arrowsPhone"></div>
+                <div *ngIf="hoverAll && moreThanOnePicture" class="arrows next arrowsPhone"></div>
             </div>
 
     </div>

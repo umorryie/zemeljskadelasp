@@ -11,6 +11,7 @@ export class CardComponent implements  OnInit {
   index: number;
   hoverAll: boolean;
   hoverText: boolean;
+  moreThanOnePicture: boolean;
 
   constructor() {
     this.index = 0;
@@ -18,6 +19,10 @@ export class CardComponent implements  OnInit {
   ngOnInit() {
     if (document.body.offsetWidth < 750) { // 768px portrait
       this.hoverAll = true;
+    }
+
+    if(this.offer.images.length > 1) {
+      this.moreThanOnePicture = true;
     }
   }
 
