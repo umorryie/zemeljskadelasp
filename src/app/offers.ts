@@ -109,7 +109,7 @@ export const offers = {
             ]
         },
         {
-            "offerName": "Podboji alsfaltnih cest",
+            "offerName": "Podboji asfaltnih cest",
             "url": "../../assets/podboj.jpg",
             "images": [
                 {
@@ -127,7 +127,7 @@ export const offers = {
             ]
         },
         {
-            "offerName": "Izdelava kanalizacija",
+            "offerName": "Izdelava kanalizacij",
             "url": "../../assets/kanalizacija.jpg",
             "images": [
                 {
@@ -183,7 +183,7 @@ export const offers = {
             ]
         },
         {
-            "offerName": "Čistilne naprave",
+            "offerName": "Vgradnja čistilnih naprav",
             "url": "../../assets/cistilna.jpg",
             "images": [
                 {
@@ -192,7 +192,7 @@ export const offers = {
             ]
         },
         {
-            "offerName": "Nakladanje in razkladanje z hiabom",
+            "offerName": "Nakladanje in razkladanje s hiabom",
             "url": "../../assets/hiap.jpg",
             "images": [
                 {
